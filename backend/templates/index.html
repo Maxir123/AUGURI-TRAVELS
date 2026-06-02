@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auguri Travel Agent</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a href="/" class="brand">
+          <img src="/static/images/Logo.png" alt="Auguri Travel Agent" class="brand__logo-img" />
+        </a>
+        <button class="hamburger" id="hamburgerBtn">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+        <nav class="nav" id="navMenu">
+          <a href="/" class="nav__link">Home</a>
+          <a href="/about" class="nav__link">About</a>
+          <a href="/contact" class="nav__link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-background" style="background-image: url('/static/images/herobg.jfif');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero__grid">
+          <div class="hero-content">
+            <div class="pill">Navigation & Comfort</div>
+            <h1 class="hero__title">Explore the world with<br><span class="gradient-text">AUGURI & LAWAL TOUR GUIDE</span></h1>
+            <p class="hero__subtitle">
+              Airline tickets, visa support, tour guidance, personal shopping, insurance, and
+              more—handled with care.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="/contact">Plan a Trip</a>
+              <a
+                class="btn btn--ghost"
+                href="https://wa.me/393500460774"
+                target="_blank"
+                rel="noreferrer"
+              >Book on WhatsApp</a>
+            </div>
+          </div>
+          <div class="hero__card">
+            <h2 class="card__title">Quick Booking</h2>
+            <form id="bookingForm" class="form">
+              <div class="form__row">
+                <label class="label">Full Name</label>
+                <input name="fullName" class="input" required />
+              </div>
+              <div class="form__row">
+                <label class="label">Email</label>
+                <input type="email" name="email" class="input" required />
+              </div>
+              <div class="form__row">
+                <label class="label">Phone</label>
+                <input type="tel" name="phone" class="input" required />
+              </div>
+              <div class="form__row">
+                <label class="label">Destination</label>
+                <input name="destination" class="input" required />
+              </div>
+              <div class="form__row form__row--2">
+                <div>
+                  <label class="label">Departure Date</label>
+                  <input type="date" name="departureDate" class="input" required />
+                </div>
+                <div>
+                  <label class="label">Return Date</label>
+                  <input type="date" name="returnDate" class="input" />
+                </div>
+              </div>
+              <div class="form__row form__row--2">
+                <div>
+                  <label class="label">Travelers</label>
+                  <select name="travelers" class="input">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="label">Travel Class</label>
+                  <select name="travelClass" class="input">
+                    <option>Economy</option>
+                    <option>Business</option>
+                    <option>First Class</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__row">
+                <label class="label">Special Requests</label>
+                <textarea name="specialRequests" class="input textarea" rows="4"></textarea>
+              </div>
+
+              <button class="btn btn--primary" type="submit">Submit Booking</button>
+              <p id="bookingMsg" class="form__msg" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section brief-info">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 32px;">
+            <p class="subtitle-text">Let us help you plan your next adventure</p>
+            <h2 style="margin: 0; font-size: 32px; margin-bottom: 8px;">Services We Offer</h2>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="/static/images/guide.png" alt="Lawal Tour Guide" class="service-image">
+              </div>
+              <h3>Lawal Tour Guide</h3>
+              <p>Comprehensive travel experiences with airport pickups across Africa, Germany, Venice, and Rome. Knowledgeable guides ensure an unforgettable journey with local expertise.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="/static/images/cart.png" alt="Personal Shopper" class="service-image">
+              </div>
+              <h3>Personal Shopper</h3>
+              <p>Expert guidance through international outlets for authentic goods at affordable prices. We ensure you get the best deals on high-quality items in foreign markets.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="/static/images/airline.png" alt="Airline Tickets" class="service-image">
+              </div>
+              <h3>Airline Tickets</h3>
+              <p>We specialize in providing the best deals on airline tickets worldwide. Get competitive pricing and reliable ticketing services for your next trip.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="/static/images/ocean.png" alt="Ocean Cruises" class="service-image">
+              </div>
+              <h3>Ocean Cruises</h3>
+              <p>Luxurious and comfortable ocean travel with stunning views of the sea. Experience premium cruise packages tailored to your preferences.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="/static/images/Business.png" alt="Corporate Travel" class="service-image">
+              </div>
+              <h3>Corporate Travel Management</h3>
+              <p>Professional travel solutions for businesses. We handle all logistics and planning for corporate trips with dedicated support.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="/static/images/iternaries.png" alt="Travel Itineraries" class="service-image">
+              </div>
+              <h3>Travel Itineraries</h3>
+              <p>Expert itinerary planning and reservations including hotel bookings, activities, and ground transportation. Our team handles all logistics.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="/static/images/insurance.png" alt="Travel Insurance" class="service-image">
+              </div>
+              <h3>Travel Insurance</h3>
+              <p>Comprehensive travel insurance providing peace of mind and protection. Essential coverage for international medical emergencies.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="/static/images/visa.png" alt="Visa Appointments" class="service-image">
+              </div>
+              <h3>Visa Appointments</h3>
+              <p>Expert visa acquisition support for Schengen, Canada, and USA. Our team handles all matters concerning your visa processing.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="/static/images/health.png" alt="Health Insurance" class="service-image">
+              </div>
+              <h3>International Health Insurance</h3>
+              <p>Complete health coverage for international travel. Protection and peace of mind for your medical needs abroad.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-image-wrapper">
+                <img src="/static/images/sport.png" alt="Sports Marketing" class="service-image">
+              </div>
+              <h3>Sports Marketing</h3>
+              <p>Elite programs in football, basketball, and athletics. Connected to national stadiums across Nigeria with top-tier facilities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 32px;">
+            <h2 style="margin: 0; font-size: 32px; margin-bottom: 8px;">What Our Travelers Say</h2>
+            <p class="subtitle-text">Real experiences from our satisfied clients</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="/static/images/Pics.png" alt="Chioma A.">
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Auguri made my European trip seamless. From visa support to local guides, everything was perfectly coordinated. Highly recommended!"</p>
+              <p class="testimonial-author">— Chioma A., Lagos</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="/static/images/Pics2.png" alt="Adeyemi T.">
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"The personal shopping service saved me so much time and money. They knew exactly where to find authentic goods at the best prices."</p>
+              <p class="testimonial-author">— Adeyemi T., Milan</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="/static/images/Testimonial.png" alt="Sarah M.">
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Lawal Tour Guide's expertise transformed our vacation. They handled everything from airport pickups to cultural tours. Unforgettable experience!"</p>
+              <p class="testimonial-author">— Sarah M., Berlin</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="/static/images/footer.jfif" alt="Tunde O.">
+              </div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Our corporate travel program through Auguri has been exceptional. Professional, reliable, and they understand business travel needs perfectly."</p>
+              <p class="testimonial-author">— Tunde O., Company Director</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container cta-content">
+          <h2>Ready to Start Your Journey?</h2>
+          <p>Contact us today for personalized travel advice and booking assistance</p>
+          <a href="/contact" class="btn btn--primary" style="margin-top: 16px;">Get in Touch</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__section">
+            <h4>Quick Links</h4>
+            <a href="/" class="footer__link">Home</a>
+            <a href="/about" class="footer__link">About</a>
+            <a href="/contact" class="footer__link">Contact</a>
+          </div>
+          <div class="footer__section">
+            <h4>Services</h4>
+            <a href="#" class="footer__link">Flight Tickets</a>
+            <a href="#" class="footer__link">Visa Support</a>
+            <a href="#" class="footer__link">Tour Guide</a>
+          </div>
+          <div class="footer__section">
+            <h4>Connect</h4>
+            <a href="https://wa.me/393500460774" class="footer__link" target="_blank">WhatsApp</a>
+            <a href="#" class="footer__link">Email</a>
+            <a href="#" class="footer__link">Phone</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div>© <span id="year"></span> Auguri Travel Agent. All rights reserved.</div>
+          <div style="font-size: 12px; color: var(--muted);">Registered & Certified by CAC</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      // EmailJS init (Public Key / User ID)
+      emailjs.init('GJ1poMjwh1xiLrZMh');
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+
+
+      // Hamburger menu toggle
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const navMenu = document.getElementById('navMenu');
+      
+      hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('nav--open');
+        hamburgerBtn.classList.toggle('hamburger--active');
+      });
+
+      // Close menu when a link is clicked
+      navMenu.querySelectorAll('.nav__link').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('nav--open');
+          hamburgerBtn.classList.remove('hamburger--active');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.topbar')) {
+          navMenu.classList.remove('nav--open');
+          hamburgerBtn.classList.remove('hamburger--active');
+        }
+      });
+
+      const form = document.getElementById('bookingForm');
+      const msg = document.getElementById('bookingMsg');
+      const btn = form.querySelector('button[type="submit"]');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        msg.textContent = 'Processing your booking...';
+        msg.className = 'form__msg';
+        
+        // Add loading state to button
+        btn.classList.add('loading');
+        btn.disabled = true;
+
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        // Send email via EmailJS (frontend). Requires EmailJS template IDs.
+        // To avoid duplicates, backend does NOT send emails anymore.
+        try {
+          const emailParams = {
+            fullName: data.fullName || '',
+            email: data.email || '',
+            phone: data.phone || '',
+            destination: data.destination || '',
+            departureDate: data.departureDate || '',
+            returnDate: data.returnDate || '',
+            travelers: data.travelers || '',
+            travelClass: data.travelClass || '',
+            specialRequests: data.specialRequests || '',
+          };
+
+          // TODO: Replace these with your real EmailJS template IDs.
+          await emailjs.send(
+            'service_8d6idl3',
+            'template_36covjf',
+            emailParams,
+            'GJ1poMjwh1xiLrZMh'
+          );
+        } catch (emailErr) {
+          console.error('EmailJS error:', emailErr);
+        }
+
+        try {
+          const res = await fetch('/api/booking', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+
+          const out = await res.json().catch(() => ({}));
+          if (!res.ok) throw new Error(out.error || 'Request failed');
+
+          if (out.whatsappStatus === 'sent') {
+            msg.textContent = '✓ Booking submitted successfully! Your booking details were sent to WhatsApp.';
+          } else if (out.whatsappStatus === 'failed') {
+            msg.textContent = '✓ Booking submitted successfully, but WhatsApp delivery could not be confirmed. We still received your booking.';
+          } else {
+            msg.textContent = '✓ Booking submitted successfully! We\'ll contact you shortly.';
+          }
+          msg.className = 'form__msg success';
+          form.reset();
+          
+          // Add success class to form fields
+          form.querySelectorAll('.input').forEach(input => {
+            input.classList.remove('input-error');
+            input.classList.add('input-success');
+          });
+          
+          setTimeout(() => {
+            form.querySelectorAll('.input').forEach(input => {
+              input.classList.remove('input-success');
+            });
+          }, 3000);
+        } catch (err) {
+          msg.textContent = '✗ ' + (err.message || 'Submission failed. Please try again.');
+          msg.className = 'form__msg error';
+          form.querySelectorAll('.input').forEach(input => {
+            input.classList.add('input-error');
+          });
+        } finally {
+          btn.classList.remove('loading');
+          btn.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

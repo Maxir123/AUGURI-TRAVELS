@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Auguri Travel Agent</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a href="/" class="brand">
+          <img src="/static/images/Logo.png" alt="Auguri Travel Agent" class="brand__logo-img" />
+        </a>
+        <button class="hamburger" id="hamburgerBtn">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+        <nav class="nav" id="navMenu">
+          <a href="/" class="nav__link">Home</a>
+          <a href="/about" class="nav__link">About</a>
+          <a href="/contact" class="nav__link nav__link--active">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page">
+        <div class="page-hero-img">
+          <img src="/static/images/contact.jfif" alt="Contact Us" class="page-hero-image">
+        </div>
+        
+        <h1 class="page__title">Plan Your Next Trip</h1>
+        <p class="page__lead">
+          Connect with our travel experts for personalized travel advice, group travel information, 
+          special requests, or last-minute assistance. We're here to make your journey unforgettable.
+        </p>
+
+        <div class="contact-card">
+          <div class="contact-card__left">
+            <h2>Get In Touch</h2>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-bullet"></div>
+                <div>
+                  <strong>📍 Locations</strong>
+                  <div class="muted">Victoria Island, Lagos, Nigeria</div>
+                  <div class="muted">Milan, Italy</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-bullet"></div>
+                <div>
+                  <strong>📞 Phone</strong>
+                  <div class="muted">+39 350 046 0774</div>
+                  <div class="muted">+234 858 374 4747</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-bullet"></div>
+                <div>
+                  <strong>📧 Email</strong>
+                  <div class="muted">Info@AuguriTravelagent.com</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-bullet"></div>
+                <div>
+                  <strong>💬 WhatsApp</strong>
+                  <div class="muted">Available 24/7 for quick queries</div>
+                </div>
+              </div>
+            </div>
+            <a class="btn btn--primary" href="https://wa.me/393500460774" target="_blank" rel="noreferrer" style="margin-top: 16px;">
+              Message on WhatsApp
+            </a>
+          </div>
+
+          <div class="contact-card__right">
+            <form id="contactForm" class="form form--wide">
+              <div class="form__row">
+                <label class="label">Name</label>
+                <input class="input" name="name" placeholder="Your full name" required />
+              </div>
+              <div class="form__row">
+                <label class="label">Email</label>
+                <input class="input" type="email" name="email" placeholder="your@email.com" required />
+              </div>
+              <div class="form__row">
+                <label class="label">Subject (Optional)</label>
+                <input class="input" name="subject" placeholder="e.g., Visa assistance, Group travel, etc." />
+              </div>
+              <div class="form__row">
+                <label class="label">Message</label>
+                <textarea class="input textarea" name="message" rows="6" placeholder="Tell us about your travel plans or questions..." required></textarea>
+              </div>
+
+              <button class="btn btn--primary" type="submit">Send Message</button>
+              <p id="contactMsg" class="form__msg" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-summary" style="margin-top: 48px;">
+        <h2 style="font-size: 24px; margin-bottom: 16px; text-align: center;">How We Can Help You</h2>
+        <p style="text-align: center; color: var(--muted); margin-bottom: 24px;">
+          Whether you need visa support, flight bookings, tour guides, or specialized travel services
+        </p>
+        <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img src="/static/images/airline.png" alt="Flight Bookings" class="service-image">
+            </div>
+            <h3>Flight Bookings</h3>
+            <p>Best deals on airline tickets worldwide</p>
+          </div>
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img src="/static/images/visa.png" alt="Visa Support" class="service-image">
+            </div>
+            <h3>Visa Support</h3>
+            <p>Schengen, Canada, USA & more</p>
+          </div>
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img src="/static/images/guide.png" alt="Tour Guides" class="service-image">
+            </div>
+            <h3>Tour Guides</h3>
+            <p>Expert local guides & itineraries</p>
+          </div>
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img src="/static/images/iternaries.png" alt="Hotel Planning" class="service-image">
+            </div>
+            <h3>Hotel Planning</h3>
+            <p>Curated accommodations worldwide</p>
+          </div>
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img src="/static/images/insurance.png" alt="Travel Insurance" class="service-image">
+            </div>
+            <h3>Travel Insurance</h3>
+            <p>Comprehensive coverage options</p>
+          </div>
+          <div class="service-card">
+            <div class="service-image-wrapper">
+              <img src="/static/images/cart.png" alt="Personal Shopping" class="service-image">
+            </div>
+            <h3>Personal Shopping</h3>
+            <p>Expert shopping assistance</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__section">
+            <h4>Quick Links</h4>
+            <a href="/" class="footer__link">Home</a>
+            <a href="/about" class="footer__link">About</a>
+            <a href="/contact" class="footer__link">Contact</a>
+          </div>
+          <div class="footer__section">
+            <h4>Services</h4>
+            <a href="#" class="footer__link">Flight Tickets</a>
+            <a href="#" class="footer__link">Visa Support</a>
+            <a href="#" class="footer__link">Tour Guide</a>
+          </div>
+          <div class="footer__section">
+            <h4>Connect</h4>
+            <a href="https://wa.me/393500460774" class="footer__link" target="_blank">WhatsApp</a>
+            <a href="#" class="footer__link">Email</a>
+            <a href="#" class="footer__link">Phone</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div>© <span id="year"></span> Auguri Travel Agent. All rights reserved.</div>
+          <div style="font-size: 12px; color: var(--muted);">Registered & Certified by CAC</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      // EmailJS init (Public Key / User ID)
+      emailjs.init('GJ1poMjwh1xiLrZMh');
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Hamburger menu toggle
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const navMenu = document.getElementById('navMenu');
+      
+      hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('nav--open');
+        hamburgerBtn.classList.toggle('hamburger--active');
+      });
+
+      // Close menu when a link is clicked
+      navMenu.querySelectorAll('.nav__link').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('nav--open');
+          hamburgerBtn.classList.remove('hamburger--active');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.topbar')) {
+          navMenu.classList.remove('nav--open');
+          hamburgerBtn.classList.remove('hamburger--active');
+        }
+      });
+
+      const form = document.getElementById('contactForm');
+      const msg = document.getElementById('contactMsg');
+      const btn = form.querySelector('button[type="submit"]');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        msg.textContent = 'Sending your message...';
+        msg.className = 'form__msg';
+        
+        // Add loading state to button
+        btn.classList.add('loading');
+        btn.disabled = true;
+
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        // Send email via EmailJS (frontend). Requires EmailJS template IDs.
+        // To avoid duplicates, backend does NOT send emails anymore.
+        try {
+          const emailParams = {
+            name: data.name || '',
+            email: data.email || '',
+            subject: data.subject || '',
+            message: data.message || '',
+          };
+
+          // TODO: Replace these with your real EmailJS template IDs.
+          await emailjs.send(
+            'service_8d6idl3',
+            'template_36covjf',
+            emailParams,
+            'GJ1poMjwh1xiLrZMh'
+          );
+        } catch (emailErr) {
+          console.error('EmailJS error:', emailErr);
+        }
+
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+
+          const out = await res.json().catch(() => ({}));
+          if (!res.ok) throw new Error(out.error || 'Request failed');
+
+          msg.textContent = '✓ Message sent successfully! We\'ll get back to you soon.';
+          msg.className = 'form__msg success';
+          form.reset();
+          
+          // Add success class to form fields
+          form.querySelectorAll('.input').forEach(input => {
+            input.classList.remove('input-error');
+            input.classList.add('input-success');
+          });
+          
+          setTimeout(() => {
+            form.querySelectorAll('.input').forEach(input => {
+              input.classList.remove('input-success');
+            });
+          }, 3000);
+        } catch (err) {
+          msg.textContent = '✗ ' + (err.message || 'Submission failed. Please try again.');
+          msg.className = 'form__msg error';
+          form.querySelectorAll('.input').forEach(input => {
+            input.classList.add('input-error');
+          });
+        } finally {
+          btn.classList.remove('loading');
+          btn.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>
+
